@@ -14,11 +14,11 @@
                    v-model="product.name"/></td>
         <td><input type="text" class="form-control" placeholder="Количество"
                    v-model="product.quantity"/></td>
-        <td><input type="text" class="form-contro mb-3" placeholder="Цена"
+        <td><input type="text" class="form-control" placeholder="Цена"
                    v-model="product.price"/></td>
         <td>
-            <button class="btn btn-primary" v-on:click="save()">save</button>
-            <button class="btn btn-secondary" v-on:click="cancel()">cancel</button>
+            <button class="btn btn-primary" v-on:click="save()">Save</button>
+            <button class="btn btn-secondary" v-on:click="cancel()">Cancel</button>
         </td>
     </tr>
 </template>

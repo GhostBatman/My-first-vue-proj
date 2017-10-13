@@ -14,7 +14,8 @@
                 <component is='product-component'
                            v-for="product in products"
                            :product="product"
-                           @remove="removeProduct(product)"></component>
+                           @remove="removeProduct(product)">
+                </component>
                 <tr>
                     <td></td>
                     <td></td>
@@ -24,11 +25,22 @@
                 </tbody>
             </table>
             <div class="form-inline">
-                <input type="text" class="form-control mb-3" placeholder="Наименование продукта"
+                <input type="text"
+                       class="form-control mb-3"
+                       placeholder="Наименование продукта"
                        v-model="newProduct.name"/>
-                <input type="text" class="form-control mb-3" placeholder="Колличество" v-model="newProduct.quantity"/>
-                <input type="text" class="form-control mb-3" placeholder="Цена" v-model="newProduct.price"/>
-                <button class="btn btn-primary mb-3" v-on:click="addNewProduct(newProduct)">Добавить</button>
+                <input type="text"
+                       class="form-control mb-3"
+                       placeholder="Колличество"
+                       v-model="newProduct.quantity"/>
+                <input type="text"
+                       class="form-control mb-3"
+                       placeholder="Цена"
+                       v-model="newProduct.price"/>
+                <button class="btn btn-primary mb-3"
+                        v-on:click="addNewProduct(newProduct)">
+                    Добавить
+                </button>
             </div>
         </div>
         <div class="col-md-2"></div>
@@ -77,24 +89,3 @@
 
     }
 </script>
-
-<!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
-    h1, h2 {
-        font-weight: normal;
-    }
-
-    ul {
-        list-style-type: none;
-        padding: 0;
-    }
-
-    li {
-        display: inline-block;
-        margin: 0 10px;
-    }
-
-    a {
-        color: #42b983;
-    }
-</style>
